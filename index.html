@@ -49,10 +49,10 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        Zijiao Chen<sup>1</sup>
+                        Zijiao Chen<sup>1*</sup>
                     </li>
                     <li>
-                        Jiaxin Qing<sup>2</sup>
+                        Jiaxin Qing<sup>2*</sup>
                     </li>
                     <li>
                         <a href="https://scholar.google.com/citations?user=sskixKkAAAAJ&hl">
@@ -82,6 +82,9 @@
                     </li>
                     <li>
                         <sup>3</sup>Standford University
+                    </li>
+                    <li>
+                        <sup>*</sup>Equal Contribution
                     </li>
                 </ul>
             </div>
@@ -139,7 +142,7 @@
                 <p class="text-justify">
                     Decoding visual stimuli from brain recordings aims to deepen our understanding of the human visual system and build a solid foundation for bridging human vision and computer vision through the Brain-Computer Interface. 
                     However, due to the scarcity of data annotations and the complexity of underlying brain information, it is challenging to decode images with faithful details and meaningful semantics. 
-                    In this work, we present MinD-Vis: Sparse Masked Brain Modeling with Double-Conditioned Latent Diffusion Model for Human Vision Decoding.                   
+                    In this work, we present <b>MinD-Vis</b>: Sparse <b>M</b>asked Bra<b>in</b> Modeling with <b>D</b>ouble<b>-</b>Conditioned Latent Diffusion Model for Human <b>Vis</b>ion Decoding.                   
                     Specifically, by boosting the information capacity of representations learned in a large-scale resting-state fMRI dataset, we show that our MinD-Vis framework reconstructed highly plausible images with semantically matching details from brain recordings with very few training pairs. 
                     We quantitatively benchmarked our model and the experimental results demonstrate that our method outperformed state-of-the-arts in both semantic mapping (100-way semantic classification) and generation quality (FID) by 66% and 41%, respectively.
                     Exhaustive ablation studies are conducted to analyze our framework. 
@@ -176,22 +179,60 @@
                 <p class="text-justify">
                     <ul>
                         <li>
-                            A long range feature aggregator focuses on object shape and geometry. 
+                            A human visual decoding system that only reply on limited annotations.
                         </li>
                         <li>
-                            State-of-the-art accuracy on ModelNet40 classification: <b>93.8%</b> <i style="color:gray;font-size:8px;">w/o voting</i>, <b>94.2%</b> <i style="color:gray;font-size:8px;">w/ voting</i>.
+                            State-of-the-art 100-way top-1 classification accuracy on GOD dataset: <b>23.9%</b>
+                            <!-- State-of-the-art 100-way top-1 classification accuracy on GOD dataset: <b>23.9%</b> <i style="color:gray;font-size:8px;">w/o voting</i>, <b>94.2%</b> <i style="color:gray;font-size:8px;">w/ voting</i>. -->
                         </li>
                         <li>
-                            State-of-the-art instance mIoU on ShapeNetPart segmentation: <b>86.6%</b> <i style="color:gray;font-size:8px;">w/o voting</i>, <b>86.8%</b> <i style="color:gray;font-size:8px;">w/ voting</i>.
-                        </li>
-                        <li>
-                            State-of-the-art cosine distance on ModelNet40 normal estimation: <b>0.11</b>.
+                            State-of-the-art generation quality (FID) on GOD dataset: <b>1.67</b> .
                         </li>
                     </ul>
                 </p>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    MinD-Vis
+                </h3>
+                <img src="./index_files/images/flowchart.png" class="img-responsive" alt="method"><br>
+                <p class="text-justify">
+                    Stage A (left): Self-supervised pre-training on large-scale fMRI dataset using Sparse-Coding based Masked Brain Modeling (SC-MBM);
+                    Stage B (right): Double-Conditioned Latent Diffusion Model (DC-LDM) for image generation conditioned on brain recordings.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results compared with SOTA
+                </h3>
+                <img src="./index_files/images/compare_figs.png" class="img-responsive" alt="result with sota"><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Generation Consistency
+                </h3>
+                <img src="./index_files/images/consistent.png" class="img-responsive" width="300" alt="consistency"><br>
+            </div>
+        </div>
         
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Replication Dataset
+                </h3>
+                <img src="./index_files/images/bold5000.png" class="img-responsive" width="400" alt="bold5000"><br>
+            </div>
+        </div>
+
         <div class="row" id="BibTeX">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -214,7 +255,7 @@
                 <h3>
                     Acknowledgments
                 </h3>
-                The website template was borrowed from <a href="https://sggpoint.github.io">Chaoyi Zhang</a>.
+                The website template was borrowed from <a href="https://curvenet.github.io">Tiange Xiang</a>.
                 <p></p>
             </div>
         </div>

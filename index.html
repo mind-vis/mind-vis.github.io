@@ -2,7 +2,7 @@
     
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>CurveNet</title>
+    <title>MinD-Vis</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -55,17 +55,13 @@
                         Jiaxin Qing<sup>2*</sup>
                     </li>
                     <li>
-                        <a href="https://scholar.google.com/citations?user=sskixKkAAAAJ&hl">
-                          Tiange Xiang
-                        </a><sup>3</sup>
+                        Tiange Xiang<sup>3</sup>
                     </li>
                     <li>
                         Wan Lin Yue<sup>1</sup>
                     </li>
                      <li>
-                        <a href="https://scholar.google.com.sg/citations?user=4Z1S3_oAAAAJ&hl">
-                          Juan(Helen) Zhou
-                        </a><sup>1</sup>
+                        Juan (Helen) Zhou<sup>1</sup>
                     </li>
                 </ul>
             </div>
@@ -75,13 +71,15 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <sup>1</sup>National University of Singapore
+                        <sup>1</sup>National University of Singapore, Center for Sleep and Cognition
                     </li>
+                    <br>
                     <li>
-                        <sup>2</sup>The Chinese University of Hong Kong
+                        <sup>2</sup>The Chinese University of Hong Kong, Department of Information Engineering
                     </li>
+                    <br>
                     <li>
-                        <sup>3</sup>Standford University
+                        <sup>3</sup>Standford University, Vision and Learning Lab
                     </li>
                     <li>
                         <sup>*</sup>Equal Contribution
@@ -103,12 +101,6 @@
                         <a href="./supplementary.pdf" target='_blank'>
                         <img src="./index_files/images/supp.png" height="80px"><br>
                             <h4><strong>Supp. Materials</strong></h4>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#video">
-                        <img src="index_files/images/youtube_icon_dark.png" height="80px"><br>
-                            <h4><strong>Video</strong></h4>
                         </a>
                     </li>
                      <li>
@@ -140,36 +132,20 @@
                 </h3>
                 <img src="./index_files/images/first_fig.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify">
+                    <i style="font-size:22px;">Motivation</i>
+                    <br>
                     Decoding visual stimuli from brain recordings aims to deepen our understanding of the human visual system and build a solid foundation for bridging human vision and computer vision through the Brain-Computer Interface. 
                     However, due to the scarcity of data annotations and the complexity of underlying brain information, it is challenging to decode images with faithful details and meaningful semantics. 
-                    In this work, we present <b>MinD-Vis</b>: Sparse <b>M</b>asked Bra<b>in</b> Modeling with <b>D</b>ouble<b>-</b>Conditioned Latent Diffusion Model for Human <b>Vis</b>ion Decoding.                   
-                    Specifically, by boosting the information capacity of representations learned in a large-scale resting-state fMRI dataset, we show that our MinD-Vis framework reconstructed highly plausible images with semantically matching details from brain recordings with very few training pairs. 
-                    We quantitatively benchmarked our model and the experimental results demonstrate that our method outperformed state-of-the-arts in both semantic mapping (100-way semantic classification) and generation quality (FID) by 66% and 41%, respectively.
+                    <br>
+                    <i style="font-size:22px;">Contribution</i>
+                    <br>
+                    In this work, we present <b>MinD-Vis</b>: Sparse <b>M</b>asked Bra<b>in</b> Modeling with <b>D</b>ouble<b>-</b>Conditioned Diffusion Model for <b>Vis</b>ion Decoding.                   
+                    Specifically, by boosting the information capacity of representations learned in a large-scale resting-state fMRI dataset, we show that our MinD-Vis framework reconstructed <b>highly plausible images with semantically matching details</b> from brain recordings with very few training pairs. 
+                    We benchmarked our model and our method outperformed state-of-the-arts in both <b>semantic mapping</b> (100-way semantic classification) and <b>generation quality</b> (FID) by <b>66%</b> and <b>41%</b>, respectively.
                     Exhaustive ablation studies are conducted to analyze our framework. 
                 </p>
             </div>
         </div>
-
-        <!-- <div class="row" id="video">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
-                <div class="text-center">
-                    <video id="video_id" width="100%" controls="" controlsList="nodownload">>
-                        <source src="./index_files/videos/video.mp4" type="video/mp4">
-                        <track label="English" kind="subtitles" srclang="en" src="./index_files/videos/captions.vtt">
-                    </video>
-
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                        var video = document.querySelector('#video_id'); // get the video element
-                        var tracks = video.textTracks; // one for each track element
-                        var track = tracks[0]; // corresponds to the first track element
-                        track.mode = 'hidden';});
-                    </script>
-
-                </div>
-            </div>
-        </div> -->
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -182,11 +158,13 @@
                             A human visual decoding system that only reply on limited annotations.
                         </li>
                         <li>
-                            State-of-the-art 100-way top-1 classification accuracy on GOD dataset: <b>23.9%</b>
-                            <!-- State-of-the-art 100-way top-1 classification accuracy on GOD dataset: <b>23.9%</b> <i style="color:gray;font-size:8px;">w/o voting</i>, <b>94.2%</b> <i style="color:gray;font-size:8px;">w/ voting</i>. -->
+                            State-of-the-art 100-way top-1 classification accuracy on GOD dataset: <b>23.9%</b>, outperforming the previous best by <b>66%</b>.
                         </li>
                         <li>
-                            State-of-the-art generation quality (FID) on GOD dataset: <b>1.67</b> .
+                            State-of-the-art generation quality (FID) on GOD dataset: <b>1.67</b>, outperforming the previous best by <b>41%</b>.
+                        </li>
+                        <li>
+                            For the first time, we show that non-invasive brain recordings can be used to decode images with similar performance as invasive measures.
                         </li>
                     </ul>
                 </p>
@@ -200,8 +178,8 @@
                 </h3>
                 <img src="./index_files/images/flowchart.png" class="img-responsive" alt="method"><br>
                 <p class="text-justify">
-                    Stage A (left): Self-supervised pre-training on large-scale fMRI dataset using Sparse-Coding based Masked Brain Modeling (SC-MBM);
-                    Stage B (right): Double-Conditioned Latent Diffusion Model (DC-LDM) for image generation conditioned on brain recordings.
+                    <b>Stage A</b> (left): Self-supervised pre-training on large-scale fMRI dataset using Sparse-Coding based Masked Brain Modeling <b>(SC-MBM)</b>;
+                    <b>Stage B</b> (right): Double-Conditioned Latent Diffusion Model <b>(DC-LDM)</b> for image generation conditioned on brain recordings.
                 </p>
             </div>
         </div>
@@ -218,20 +196,12 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Generation Consistency
+                    Generation Consistency &nbsp&nbsp&nbsp Replication Dataset
                 </h3>
-                <img src="./index_files/images/consistent.png" class="img-responsive" width="300" alt="consistency"><br>
+                <img src="./index_files/images/more_result.png" class="img-responsive" alt="consistency and bold5000"><br>
             </div>
         </div>
-        
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Replication Dataset
-                </h3>
-                <img src="./index_files/images/bold5000.png" class="img-responsive" width="400" alt="bold5000"><br>
-            </div>
-        </div>
+
 
         <div class="row" id="BibTeX">
             <div class="col-md-8 col-md-offset-2">

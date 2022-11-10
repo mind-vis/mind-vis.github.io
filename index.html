@@ -39,6 +39,10 @@
             <h1 class="col-md-12 text-center">
                 Seeing Beyond the Brain: Conditional Diffusion Model with Sparse Masked Modeling for Vision Decoding
             <br /><br />
+            <small>
+                Anomalous conference (under review)
+            </small>
+            <br /><br />
             </h1>
         </div>
         <div class="row">
@@ -57,7 +61,7 @@
                         Wan Lin Yue<sup>1</sup>
                     </li>
                      <li>
-                        Juan (Helen) Zhou<sup>1</sup>
+                        Juan Helen Zhou<sup>1</sup>
                     </li>
                 </ul>
             </div>
@@ -99,12 +103,18 @@
                             <h4><strong>Supp. Materials</strong></h4>
                         </a>
                     </li>
-                     <li>
+                    <!-- <li>
+                        <a href="#video">
+                        <img src="index_files/images/youtube_icon_dark.png" height="80px"><br>
+                            <h4><strong>Video</strong></h4>
+                        </a>
+                    </li> -->
+                     <!-- <li>
                         <a href="#dataset">
                         <img src="./index_files/images/data.png" height="80px"><br>
                             <h4><strong>Data</strong></h4>
                         </a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="https://github.com/zjc062/mind-vis">
                         <img src="./index_files/images/github_pad.png" height="80px"><br>
@@ -155,6 +165,27 @@
                 </p>
             </div>
         </div>
+
+        <!-- <div class="row" id="video">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>Video</h3><p style="color:blue;font-size:11px;">(contains audio w/ subtitles)</p>
+                <div class="text-center">
+                    <video id="video_id" width="100%" controls="" controlsList="nodownload">>
+                        <source src="./index_files/videos/video.mp4" type="video/mp4">
+                        <track label="English" kind="subtitles" srclang="en" src="./index_files/videos/captions.vtt">
+                    </video>
+
+                    <script type="text/javascript">
+                        $(document).ready(function() {
+                        var video = document.querySelector('#video_id'); // get the video element
+                        var tracks = video.textTracks; // one for each track element
+                        var track = tracks[0]; // corresponds to the first track element
+                        track.mode = 'hidden';});
+                    </script>
+
+                </div>
+            </div>
+        </div> -->
         
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -196,7 +227,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Results compared with SOTA
+                    Results compared with benchmarks
                 </h3>
                 <img src="./index_files/images/compare_figs.png" class="img-responsive" alt="result with sota"><br>
             </div>
@@ -205,7 +236,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Generation Consistency &nbsp&nbsp&nbsp Replication Dataset
+                    Generation Consistency &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Replication Dataset
                 </h3>
                 <img src="./index_files/images/more_result.png" class="img-responsive" alt="consistency and bold5000"><br>
             </div>
@@ -219,13 +250,13 @@
                 </h3>
                If you find our data or project useful in your research, please cite:
                 <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 10px">
-@InProceedings{Xiang_2021_ICCV,
-    author    = {Xiang, Tiange and Zhang, Chaoyi and Song, Yang and Yu, Jianhui and Cai, Weidong},
-    title     = {Walk in the Cloud: Learning Curves for Point Clouds Shape Analysis},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {915-924}
+@InProceedings{chen_2022_arXiv,
+    author    = {Chen, Zijiao and Qing, Jiaxin and Xiang, Tiange and Yue, Wan Lin and Zhou, Juan Helen},
+    title     = {Seeing Beyond the Brain: Masked Modeling Conditioned Diffusion Model for Human Vision Decoding},
+    booktitle = {arXiv},
+    month     = {November},
+    year      = {2022},
+    pages     = {xxx}
 }</pre>
             </div>
         </div>
